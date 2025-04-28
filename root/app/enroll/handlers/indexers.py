@@ -90,12 +90,12 @@ def DrunkenSlug() -> Indexer | None:
     if data:
         # "Sorry! The Bar is closed.
         # Please don't contact us asking for invites.""
-        if not "bar is closed" in data.lower():
-            logger.success(f"Indexer {meta.name} registration is open")
+        if "bar is closed" in data.lower():
+            logger.info(f"Indexer {meta.name} registration is closed")
 
-            return meta
+            return
 
-    logger.info(f"Indexer {meta.name} registration is closed")
+    logger.success(f"Indexer {meta.name} registration is open")
 
     return meta
 
