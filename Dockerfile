@@ -8,4 +8,6 @@ RUN \
   apk add -U --upgrade --no-cache \
     python3
 
+WORKDIR /app/enroll
+
 CMD [ "uv", "run", "enroll.py" ]
