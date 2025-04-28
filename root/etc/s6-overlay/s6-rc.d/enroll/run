@@ -1,5 +1,5 @@
 #!/bin/sh
 
 cd /app/enroll
-uv sync --frozen --no-dev
-uv run enroll.py
+# uv sync --frozen --no-dev
+# uv run enroll.py
