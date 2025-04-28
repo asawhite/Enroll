@@ -1,9 +1,9 @@
-FROM python:3.13-slim-bookworm
+FROM ghcr.io/linuxserver/baseimage-alpine:3.21
 
-WORKDIR /enroll
-COPY . .
+RUN \
+  echo "**** install packages ****" && \
+  apk add -U --upgrade --no-cache \
+    python3
 
+COPY root/ /
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
-RUN uv sync --frozen --no-dev
-
-CMD [ "uv", "run", "enroll.py" ]
