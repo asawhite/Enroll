@@ -1,5 +1,7 @@
 #!/bin/sh
 
-cd /app/enroll
+# cd /app/enroll
 # uv sync --frozen --no-dev
 # uv run enroll.py
+
+echo Hello
